@@ -1,0 +1,103 @@
+body{font-family: 'Ubuntu', sans-serif;}
+a{color:black;text-decoration:none;}
+a:hover{text-decoration:underline;}
+#menuTop.navbar-inverse {font-size:12px;margin-bottom:0;}
+#menuTop .navbar-nav a {padding:8px !important;}
+#navbar {background:#1e1d1b;}
+#navbar .navbar-right a{text-transform:uppercase;}
+#navbar .btn-register {background: #f5e008;border-color: #f5e008;color: black;margin-left: 20px;margin-top: 8px;}
+.jumbotron {background: url('../image/logo.jpg') no-repeat;background-position-x: center;padding:0;margin-bottom:0;}
+.jumbotron h1 {margin:0;text-indent:-5000px;background:url('../image/logo-legion.png');width:477px;height:188px;}
+.jumbotron .container {margin-top:0;}
+div#navbar .in {background: #1d1d1d;}
+.header-items {padding:20px 0;text-align: right;}
+.cart {margin-bottom:56px;}
+.cart button{border-color:white;}
+#search {background: white;border-radius: 5px;border-color: white;padding: 7px;opacity: 0.8;}
+#search:hover {opacity: 1;}
+#search:active{opacity: 1;}
+#search input {border:none;border-right:1px solid #ddd;box-shadow: none;}
+#search button {border-color:#fff;}
+.pattern-bottom {background:#1e1d1b url('../image/pattern-bottom.png') repeat-x; }
+.pattern-bottom button.navbar-toggle {border:0;padding:10px;margin:0;}
+.pattern-top-bottom {background:#1e1d1b url('../image/pattern-top-bottom.png') repeat-x; }
+.pattern-top-bottom button.navbar-toggle {border:0;padding:10px;margin-top:19px;}
+#menuTop {height:54px;}
+#menuMiddle {height:74px;border-radius:0;}
+.cart strong {margin-left: 20px;}
+div#navbarMiddle {margin-top:18px;}
+#navbarMiddle a {padding:9px;color:white;}
+#navbarMiddle a.active {background: #f5e008;color: black;border-top-left-radius: 300px;border-top-right-radius: 0;border-bottom-right-radius: 300px;border-bottom-left-radius: 0;padding-left: 40px;padding-right: 40px;}
+#navigation {border-radius: 10px;padding: 15px;background-color:#1D1C1A;border:none;font-weight: 500;font-size: 110%;}
+#navigation .list-group-item {border-radius:0;background-color:#1D1C1A;border:none;border-bottom:1px solid black;margin-bottom: 0;}
+#navigation .list-group-item:last-child {border:none;}
+#navigation a {color:#e4d21e;display:block;}
+#navigation .sub-level a{color:#a7a7a7;font-size:85%;font-weight:normal;}
+#navigation .sub-level .list-group-item {border:none;}
+.collapsable:hover .sub-level {display:block;}
+.collapsable .sub-level {width: 800px;top: 0;left: 230px;display:none;position: absolute;border: 1px solid #e4d21e;border-radius: 5px;z-index: 99;padding: 20px;background: #e4d21e;}
+.collapsable .sub-level .list-group-item {background-color:#e4d21e!important; }
+.collapsable .sub-level .list-group-item a {color:black !important;}
+
+#navigation .sub-level ul a {padding:2px;border-bottom:1px solid #e0a916;border-right:1px solid #e0a916;width:189px;color:black;font-weight: bold}
+#navigation .sub-level ul:last-child a {border-right:none!important;}
+#navigation .sub-level ul:first-child a {border-left:none!important;}
+#navigation .sub-level ul:first-child a:first-child {border-top:none!important;}
+
+.cadastro {
+	border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width :100%;
+}
+.cadastro-input {
+	 width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.cadastro-submit {
+	width: 100%;
+    background-color: #f5e008;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+a.button-login {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.banner { position: relative; overflow: auto;margin-bottom:20px; }
+.banner li { list-style: none;}
+.banner ul li { float: left; }
+.card .caption {padding:10px 0 0 0;}
+.card .caption p {font-size:10px;}
+.card .caption h3 {font-size:14px;margin:0;}
+.btn-shop {background-color:#e4d21e;border-color:#e4d21e;color:black;}
+.breadcrumb a{color:black;}
+.alert-success {border-color: #f5e008;
+background: #f5e008;
+color: black;}
+.alert-success a {font-weight:bold;}
+.btn-primary{background-color:#f5e008;color:black;}
+.btn-primary:hover{background-color:#f7f119;text-decoration: none;color:black;}
+
+.card .thumbnail img {width:175px !important;height:245px !important;}
+.card .thumbnail {height:362px!important;}
+#logo:hover {cursor:pointer;}
+.out-of-stock{  position: absolute;
+  top: 29px;
+  left: 19px;}
+  .out-of-stock label {border:2px solid white;}
+  .label-foil {background:url('../image/fundo-foil.png');color:black;font-weight:bold;}

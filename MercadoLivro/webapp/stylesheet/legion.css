@@ -1,0 +1,7 @@
+nav#top {background-color:#1d1c1a;color:#a7a7a7;}
+nav#top a {color:#a7a7a7;}
+.val {font-size:20px !important;}
+.btn-shop {margin-top:5px;}
+.caption h3 a {display:block;white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;}
