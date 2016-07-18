@@ -55,9 +55,10 @@
       </header>
       <nav id="menuMiddle" class="navbar pattern-top-bottom navbar-background-double" style="padding-top:10px">
 	      <div class="navbar col-ms-3 pull-right" style="padding-right:10px"></div>
-	      <a class="panel col-xs-1 pull-right" style="background-color:yellow; text-align:center" href="carrinho">Carrinho de Compras</a>
+	      ${notif}
+	      <!--a class="panel col-xs-1 pull-right" style="background-color:yellow; text-align:center" href="#collapse1" data-toggle="collapse">Mostrar Carrinho</a-->
 	  </nav>
-      <div class="container">
+      <div class="container" style="margin-left:0px">
          <div class="row">
             <div class="col-xs-12 col-sm-3">
                <div id="navigation">
@@ -91,6 +92,11 @@
                           pagination: true
                         });
                      </script>
+		            <div class="container">
+        		       	<div class="col-xs-2">
+               				${carrinhoCode}
+               			</div>
+              		</div>
                   </div>
                </div>
             </div>

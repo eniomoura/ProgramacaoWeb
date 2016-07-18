@@ -1,5 +1,7 @@
 package mercadoLivro;
 
+import java.sql.SQLException;
+
 public class ItemCarrinho {
 	private String nome;
 	private String imagePath;
@@ -7,6 +9,7 @@ public class ItemCarrinho {
 	private double preco;
 	private int estoque;
 	private int id;
+	private int quantidade;
 	
 	public ItemCarrinho(String nome, String imagePath, String tipo, double preco, int estoque, int id){
 		this.nome=nome;
@@ -15,6 +18,11 @@ public class ItemCarrinho {
 		this.estoque=estoque;
 		this.id=id;
 		this.imagePath=imagePath;
+		this.quantidade=0;
+	}
+	
+	public void adicionarItem() throws SQLException{
+		this.quantidade+=1;
 	}
 	
 	//getters and setters
@@ -40,6 +48,14 @@ public class ItemCarrinho {
 	
 	public int getID(){
 		return id;
+	}
+	
+	public int getQuantidade(){
+		return quantidade;
+	}
+	
+	public void setQuantidade(int quantidade){
+		this.quantidade=quantidade;
 	}
 	//end getters and setters
 }

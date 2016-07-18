@@ -91,4 +91,27 @@ public class CarrinhoDAO {
 		conn.close();
 		return items;
 	}
+	
+	public static ItemCarrinho getItemByID(int id) throws SQLException {
+		Connection conn = DriverManager.getConnection(URL);
+		String sql = "select * from carrinho where id=?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, id);
+		ResultSet rs = pstmt.executeQuery();
+		ItemCarrinho item=null;
+		if(rs.next()){
+			item = new ItemCarrinho(
+					rs.getString("nome"),
+					rs.getString("imagePath"),
+					rs.getString("tipo"),
+					rs.getDouble("preco"),
+					rs.getInt("estoque"),
+					rs.getInt("id")
+				);
+		}
+		rs.close();
+		pstmt.close();
+		conn.close();
+		return item;
+	}
 }
