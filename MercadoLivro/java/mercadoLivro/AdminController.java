@@ -39,7 +39,7 @@ public class AdminController extends HttpServlet {
 				CarrinhoDAO.inclui(nome, imagePath, tipo, Double.parseDouble(preco), Integer.parseInt(estoque));
 				msg = "Inclusão realizada com sucesso.";
 			} else if (op.equals("alterar")) {
-				CarrinhoDAO.alterar(nome, imagePath, tipo, Double.parseDouble(preco), Integer.parseInt(estoque), Integer.parseInt(id));
+				CarrinhoDAO.alterar(nome, imagePath, tipo, Double.parseDouble(preco), Integer.parseInt(estoque), CarrinhoDAO.getItemByNome(nome).getID());
 				msg = "Alteração realizada com sucesso.";
 			} else if (op.equals("excluir")) {
 				CarrinhoDAO.excluir(Integer.parseInt(id));
@@ -68,9 +68,10 @@ public class AdminController extends HttpServlet {
 		File[] list = dir.listFiles();
 		imagesCode=(imagesCode + list[0].getName() + "</option>\n");
 		for(int i=1;i<list.length;i++){
-			imagesCode=(imagesCode + "<option>" + list[i].getName() + "</option>\n");
 			if(i==list.length-1){
 				imagesCode=(imagesCode + "<option>" + list[i].getName() + "\n");
+			}else{
+				imagesCode=(imagesCode + "<option>" + list[i].getName() + "</option>\n");	
 			}
 		}
 		return imagesCode;

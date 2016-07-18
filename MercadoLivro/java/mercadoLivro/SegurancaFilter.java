@@ -25,19 +25,35 @@ public class SegurancaFilter implements Filter {
 		String livrosUri = request.getContextPath() + "/livros";
 		String cadernosUri = request.getContextPath() + "/cadernos";
 		String presentesUri = request.getContextPath() + "/presentes";
-		
+		Usuario usuarioLogado=null;
+		if(session!=null && session.getAttribute("usuarioLogado")!=null){
+			usuarioLogado= (Usuario) session.getAttribute("usuarioLogado");
+		}
 		boolean loggedIn = session != null && session.getAttribute("usuarioLogado")!= null;
+		boolean isAdmin = session != null && session.getAttribute("usuarioLogado")!=null && usuarioLogado.getUserType().equals("admin");
 		boolean loginRequest = request.getRequestURI().equals(loginUri);
 		boolean livrosRequest = request.getRequestURI().equals(livrosUri);
 		boolean cadernosRequest = request.getRequestURI().equals(cadernosUri);
 		boolean presentesRequest = request.getRequestURI().equals(presentesUri);
 		boolean stylesheetRequest = request.getRequestURI().contains("css");
 		boolean imageRequest = request.getRequestURI().contains("/image/");
+		boolean adminRequest = request.getRequestURI().equals(request.getContextPath()+ "/admin");
+		boolean dbRequest = request.getRequestURI().equals(request.getContextPath()+ "/dbclient.jsp");
 		
-		if (loggedIn || loginRequest || livrosRequest || cadernosRequest || presentesRequest || stylesheetRequest ||imageRequest) {
+		if (loginRequest || livrosRequest || cadernosRequest || presentesRequest || stylesheetRequest ||imageRequest) {
 			chain.doFilter(request, response);
+		} else if (loggedIn) {
+			if(adminRequest || dbRequest){
+				if(isAdmin){
+					chain.doFilter(request, response);
+				}else{
+					response.sendRedirect(loginUri);
+				}
+			}else{
+				chain.doFilter(request, response);
+			}
 		} else {
-			response.sendRedirect(loginUri);
+			response.sendRedirect(livrosUri);
 		}
 	}
 
